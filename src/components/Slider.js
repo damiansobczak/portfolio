@@ -78,6 +78,10 @@ const SlideTitle = styled.div`
   line-height: 1.2;
   margin: 16px 0;
 
+  @media (min-width: 768px) {
+    font-size: var(--text-5xl);
+  }
+
   @media (min-width: 1024px) {
     font-size: var(--text-6xl);
   }
@@ -116,7 +120,6 @@ const Button = styled(motion.button)`
   padding: 0 16px;
   font-size: var(--text-sm);
   cursor: pointer;
-  transition: var(--transition-colors);
 
   &:hover {
     background: var(--color-blue-700);

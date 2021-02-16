@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: "Damian Sobczak Portfolio",
+    siteUrl: `https://uicloud-portfolio.netlify.app`,
   },
   plugins: [
     "gatsby-plugin-styled-components",

@@ -4,6 +4,7 @@ import { StaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
 import { motion } from "framer-motion";
 import Container from "../Layouts/Container";
+import About from "./About";
 import "@fontsource/poppins/600.css";
 import "@fontsource/inter/400.css";
 
@@ -39,8 +40,6 @@ const SlideImage = styled(motion.custom(Img))`
   @media (min-width: 1024px) {
     position: absolute !important;
     right: -5%;
-    top: 50%;
-    transform: translateY(-54%);
     width: 100%;
     max-width: 1100px;
     margin-top: 0;
@@ -54,7 +53,7 @@ const SlideContainer = styled.div`
 
   @media (min-width: 1024px) {
     flex-direction: row;
-    min-height: 720px;
+    height: 720px;
   }
 `;
 
@@ -232,6 +231,7 @@ const Slider = () => {
               />
             </SlideContainer>
           </Container>
+          <About />
         </Slide>
       )}
     />

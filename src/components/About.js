@@ -9,7 +9,7 @@ import "@fontsource/inter/400.css";
 const Flex = styled.div`
   display: flex;
   flex-direction: column;
-  margin-top: 32px;
+  margin: 32px 0 96px;
 
   > * + * {
     margin-top: 32px;
@@ -17,6 +17,7 @@ const Flex = styled.div`
 
   @media (min-width: 1024px) {
     flex-direction: row;
+    margin: 32px 0 220px;
     > * + * {
       margin-top: 0;
       margin-left: 48px;

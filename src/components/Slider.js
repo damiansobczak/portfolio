@@ -14,6 +14,7 @@ const Slide = styled.div`
   overflow: hidden;
   min-height: 90vh;
   width: 100%;
+  background-color: #eeeff2;
 `;
 
 const Background = styled(motion.div)`
@@ -182,7 +183,7 @@ const Slider = () => {
           file: file(relativePath: { eq: "slider.png" }) {
             childImageSharp {
               fluid(maxWidth: 1100, quality: 100) {
-                ...GatsbyImageSharpFluid
+                ...GatsbyImageSharpFluid_withWebp
               }
             }
           }

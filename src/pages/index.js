@@ -2,6 +2,7 @@ import * as React from "react";
 import "../styles/global.css";
 import Navbar from "../components/Navbar";
 import Slider from "../components/Slider";
+import AboutImage from "../components/AboutImage";
 
 // styles
 
@@ -11,6 +12,7 @@ const IndexPage = () => {
     <>
       <Navbar />
       <Slider />
+      <AboutImage />
     </>
   );
 };

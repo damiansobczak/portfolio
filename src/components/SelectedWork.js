@@ -25,7 +25,7 @@ const Title = styled.h3`
   margin-bottom: 56px;
 `;
 
-const Flex = styled.div`
+const Grid = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
   grid-template-rows: auto;
@@ -98,7 +98,7 @@ const SelectedWork = () => {
         <Container>
           <Line />
           <Title>Selected Work</Title>
-          <Flex>
+          <Grid>
             <Article>
               <Image fluid={data.file.childImageSharp.fluid} />
               <BlogTitle>Portfolio Website</BlogTitle>
@@ -177,7 +177,7 @@ const SelectedWork = () => {
                 </svg>
               </Link>
             </Article>
-          </Flex>
+          </Grid>
         </Container>
       )}
     />

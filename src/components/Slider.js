@@ -15,6 +15,7 @@ const Slide = styled.div`
   min-height: 90vh;
   width: 100%;
   background-color: #eeeff2;
+  border-radius: 0 0 36px 36px;
 `;
 
 const Background = styled(motion.div)`
@@ -54,7 +55,7 @@ const SlideContainer = styled.div`
 
   @media (min-width: 1024px) {
     flex-direction: row;
-    height: 720px;
+    height: 640px;
   }
 `;
 

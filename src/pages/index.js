@@ -4,6 +4,7 @@ import Navbar from "../components/Navbar";
 import Slider from "../components/Slider";
 import AboutImage from "../components/AboutImage";
 import SelectedWork from "../components/SelectedWork";
+import Jumbo from "../components/Jumbo";
 
 // styles
 
@@ -15,6 +16,7 @@ const IndexPage = () => {
       <Slider />
       <AboutImage />
       <SelectedWork />
+      <Jumbo />
     </>
   );
 };

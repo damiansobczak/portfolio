@@ -3,6 +3,7 @@ import "../styles/global.css";
 import Navbar from "../components/Navbar";
 import Slider from "../components/Slider";
 import AboutImage from "../components/AboutImage";
+import SelectedWork from "../components/SelectedWork";
 
 // styles
 
@@ -13,6 +14,7 @@ const IndexPage = () => {
       <Navbar />
       <Slider />
       <AboutImage />
+      <SelectedWork />
     </>
   );
 };

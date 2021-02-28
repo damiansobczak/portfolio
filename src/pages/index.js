@@ -5,6 +5,7 @@ import Slider from "../components/Slider";
 import AboutImage from "../components/AboutImage";
 import SelectedWork from "../components/SelectedWork";
 import Jumbo from "../components/Jumbo";
+import Skills from "../components/Skills";
 
 // styles
 
@@ -17,6 +18,7 @@ const IndexPage = () => {
       <AboutImage />
       <SelectedWork />
       <Jumbo />
+      <Skills />
     </>
   );
 };

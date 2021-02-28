@@ -138,7 +138,7 @@ const Jumbo = () => {
         query {
           file: file(relativePath: { eq: "jumbo.png" }) {
             childImageSharp {
-              fluid(maxWidth: 1100, quality: 100) {
+              fluid(maxWidth: 400, quality: 100) {
                 ...GatsbyImageSharpFluid_withWebp
               }
             }

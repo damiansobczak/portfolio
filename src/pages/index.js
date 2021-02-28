@@ -6,6 +6,7 @@ import AboutImage from "../components/AboutImage";
 import SelectedWork from "../components/SelectedWork";
 import Jumbo from "../components/Jumbo";
 import Skills from "../components/Skills";
+import Footer from "../components/Footer";
 
 // styles
 
@@ -19,6 +20,7 @@ const IndexPage = () => {
       <SelectedWork />
       <Jumbo />
       <Skills />
+      <Footer />
     </>
   );
 };

@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 module.exports = {
   siteMetadata: {
     title: "Damian Sobczak Portfolio",
@@ -23,6 +25,12 @@ module.exports = {
         path: "./src/images/",
       },
       __key: "images",
+    },
+    {
+      resolve: `gatsby-source-datocms`,
+      options: {
+        apiToken: process.env.API_DATO_CMS,
+      },
     },
   ],
 };

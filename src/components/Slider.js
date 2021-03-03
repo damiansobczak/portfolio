@@ -114,16 +114,22 @@ const SlideText = styled(motion.p)`
 `;
 
 const Button = styled(motion.button)`
-  background: var(--color-blue-600);
+  background: transparent;
   border-radius: var(--rounded-xl);
-  color: #fff;
+  color: var(--color-gray-700);
   height: 48px;
   padding: 0 16px;
+  border: 2px solid var(--color-gray-700);
   font-size: var(--text-sm);
   cursor: pointer;
 
   &:hover {
-    background: var(--color-blue-700);
+    background: var(--color-gray-100);
+  }
+
+  &:focus {
+    outline: 0;
+    box-shadow: 0 0 0 3px var(--color-gray-300);
   }
 `;
 

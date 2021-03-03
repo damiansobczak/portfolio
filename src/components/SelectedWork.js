@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Container from "../Layouts/Container";
 import "@fontsource/poppins/600.css";
 import "@fontsource/inter/400.css";
-import { StaticQuery, graphql } from "gatsby";
+import { StaticQuery, graphql, Link } from "gatsby";
 import Img from "gatsby-image";
 
 //styles
@@ -39,9 +39,14 @@ const Image = styled(Img)`
   margin-bottom: 24px;
   width: 100%;
   height: 20rem;
+  border: 1px solid var(--color-gray-50);
 `;
 
-const Article = styled.article``;
+const Article = styled.article`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
 
 const BlogTitle = styled.h3`
   color: var(--text-primary);
@@ -49,7 +54,7 @@ const BlogTitle = styled.h3`
   font-family: "Poppins";
   text-align: center;
   font-size: var(--text-lg);
-  margin-bottom: 0;
+  margin: 0;
 `;
 
 const BlogText = styled.p`
@@ -61,17 +66,20 @@ const BlogText = styled.p`
   line-height: 1.6;
 `;
 
-const Link = styled.button`
-  display: flex;
+const Navigate = styled(Link)`
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   font-family: "Poppins";
   font-weight: 600;
   color: var(--text-primary);
   padding: 8px 0;
-  width: 100%;
   white-space: nowrap;
   cursor: pointer;
+
+  &:hover {
+    opacity: 0.7;
+  }
 
   svg {
     stroke: var(--text-primary);
@@ -84,99 +92,61 @@ const SelectedWork = () => {
   return (
     <StaticQuery
       query={graphql`
-        query {
-          file: file(relativePath: { eq: "blog.png" }) {
-            childImageSharp {
-              fluid(maxWidth: 1100, quality: 100) {
-                ...GatsbyImageSharpFluid_withWebp
+        {
+          allDatoCmsPortfolio {
+            edges {
+              node {
+                id
+                slug
+                title
+                description
+                media {
+                  fluid(
+                    maxWidth: 400
+                    forceBlurhash: true
+                    imgixParams: { fm: "webp", auto: "compress" }
+                  ) {
+                    ...GatsbyDatoCmsFluid
+                  }
+                }
               }
             }
           }
         }
       `}
-      render={(data) => (
+      render={({ allDatoCmsPortfolio: { edges } }) => (
         <Container>
           <Line />
           <Title>Selected Work</Title>
           <Grid>
-            <Article>
-              <Image fluid={data.file.childImageSharp.fluid} />
-              <BlogTitle>Portfolio Website</BlogTitle>
-              <BlogText>
-                Suspendisse quis erat purus. Donec sit amet mi id odio rhoncus
-                volutpat ut ac erat.
-              </BlogText>
-              <Link>
-                See Details
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  height="24"
-                  width="24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M17 8l4 4m0 0l-4 4m4-4H3"
-                  />
-                </svg>
-              </Link>
-            </Article>
-            <Article>
-              <Image fluid={data.file.childImageSharp.fluid} />
-              <BlogTitle>Portfolio Website</BlogTitle>
-              <BlogText>
-                Suspendisse quis erat purus. Donec sit amet mi id odio rhoncus
-                volutpat ut ac erat.
-              </BlogText>
-              <Link>
-                See Details
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  height="24"
-                  width="24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M17 8l4 4m0 0l-4 4m4-4H3"
-                  />
-                </svg>
-              </Link>
-            </Article>
-            <Article>
-              <Image fluid={data.file.childImageSharp.fluid} />
-              <BlogTitle>Portfolio Website</BlogTitle>
-              <BlogText>
-                Suspendisse quis erat purus. Donec sit amet mi id odio rhoncus
-                volutpat ut ac erat.
-              </BlogText>
-              <Link>
-                See Details
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  height="24"
-                  width="24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M17 8l4 4m0 0l-4 4m4-4H3"
-                  />
-                </svg>
-              </Link>
-            </Article>
+            {edges.map(({ node: { id, media, title, description, slug } }) => (
+              <Article key={id}>
+                <Image fluid={media.fluid} />
+                <BlogTitle>Portfolio Website</BlogTitle>
+                <BlogText>
+                  Suspendisse quis erat purus. Donec sit amet mi id odio rhoncus
+                  volutpat ut ac erat.
+                </BlogText>
+                <Navigate to={`/portfolio/${slug}`}>
+                  See Details
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    height="24"
+                    width="24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M17 8l4 4m0 0l-4 4m4-4H3"
+                    />
+                  </svg>
+                </Navigate>
+              </Article>
+            ))}
           </Grid>
         </Container>
       )}

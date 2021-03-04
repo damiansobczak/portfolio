@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
-import "@fontsource/inter/400.css";
 
 //styles
 const MenuWrapper = styled(motion.nav)`

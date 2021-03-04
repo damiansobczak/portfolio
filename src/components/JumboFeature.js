@@ -1,7 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import "@fontsource/poppins/600.css";
-import "@fontsource/inter/400.css";
 
 const Features = styled.div`
   display: flex;
@@ -41,7 +39,6 @@ const Text = styled.div`
   color: var(--color-blue-300);
   font-family: "Inter";
   font-weight: 400;
-  font-size: var(--text-sm);
   margin-top: 8px;
   line-height: 1.6;
 `;

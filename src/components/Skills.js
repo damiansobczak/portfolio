@@ -3,8 +3,6 @@ import styled from "styled-components";
 import { StaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
 import Container from "../Layouts/Container";
-import "@fontsource/poppins/600.css";
-import "@fontsource/inter/400.css";
 
 //styles
 const Wrapper = styled.section`

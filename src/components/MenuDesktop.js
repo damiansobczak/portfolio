@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import "@fontsource/inter/400.css";
 
 //styles
 const MenuWrapper = styled.nav`

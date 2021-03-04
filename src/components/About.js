@@ -1,9 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import Container from "../Layouts/Container";
-import "@fontsource/poppins/600.css";
-import "@fontsource/inter/500.css";
-import "@fontsource/inter/400.css";
 
 //styles
 const Flex = styled.div`
@@ -56,7 +53,7 @@ const Subtitle = styled.span`
   font-size: var(--text-md);
   position: relative;
   font-family: "Inter";
-  font-weight: 500;
+  font-weight: 600;
   color: var(--color-blue-600);
 `;
 

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import Logo from "./Logo";
 import Container from "../Layouts/Container";
 import Menu from "./Menu";
@@ -8,7 +8,13 @@ import DownloadButton from "./DownloadButton";
 
 //styles
 const Wrapper = styled.div`
-  background-color: #eeeff2;
+  background-color: ${({ light }) => (light ? "transparent" : "#eeeff2")};
+  ${({ light }) =>
+    light &&
+    css`
+      padding: 24px 0;
+      border-bottom: 1px solid var(--color-gray-100);
+    `}
 `;
 
 const Navigation = styled.div`
@@ -27,11 +33,11 @@ const MobileButton = styled.button`
 `;
 
 //markup
-const Navbar = () => {
+const Navbar = ({ light }) => {
   const [toggle, setToggle] = useState(false);
 
   return (
-    <Wrapper>
+    <Wrapper light={light}>
       <Container>
         <Navigation>
           <Logo toggle={toggle} />

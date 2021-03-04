@@ -5,8 +5,6 @@ import Img from "gatsby-image";
 import { motion } from "framer-motion";
 import Container from "../Layouts/Container";
 import About from "./About";
-import "@fontsource/poppins/600.css";
-import "@fontsource/inter/400.css";
 
 //styles
 const Slide = styled.div`

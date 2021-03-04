@@ -1,15 +1,15 @@
 import React from "react";
 import styled from "styled-components";
-import "@fontsource/poppins/500.css";
-import "@fontsource/poppins/300.css";
+import { Link } from "gatsby";
 
 //styles
-const Logotype = styled.div`
+const Logotype = styled(Link)`
   display: none;
   align-items: center;
   color: var(--text-primary);
-  font-weight: 500;
+  font-weight: 600;
   font-family: "Poppins";
+  text-decoration: none;
 
   @media (min-width: 768px) {
     display: flex;
@@ -25,7 +25,7 @@ const Text = styled.span`
 //markup
 const Logo = (props) => {
   return (
-    <Logotype toggle={props.toggle}>
+    <Logotype to={"/"} toggle={props.toggle}>
       Damian Sobczak <Text> | Portfolio</Text>
     </Logotype>
   );

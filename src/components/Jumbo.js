@@ -1,9 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import Container from "../Layouts/Container";
-import "@fontsource/poppins/600.css";
-import "@fontsource/poppins/400.css";
-import "@fontsource/inter/400.css";
 import JumboFeature from "./JumboFeature";
 import { StaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";

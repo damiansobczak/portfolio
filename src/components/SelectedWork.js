@@ -1,8 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import Container from "../Layouts/Container";
-import "@fontsource/poppins/600.css";
-import "@fontsource/inter/400.css";
 import { StaticQuery, graphql, Link } from "gatsby";
 import Img from "gatsby-image";
 
@@ -62,7 +60,6 @@ const BlogText = styled.p`
   font-weight: 400;
   font-family: "Inter";
   text-align: center;
-  font-size: var(--text-sm);
   line-height: 1.6;
 `;
 

@@ -7,7 +7,7 @@ import Footer from "../components/Footer";
 import Image from "gatsby-image";
 import Container from "../Layouts/Container";
 import Breadcrumbs from "../components/Breadcrumbs";
-import "@fontsource/Poppins/500.css";
+import "@fontsource/poppins/500.css";
 import "@fontsource/inter/400.css";
 
 //queries

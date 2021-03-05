@@ -1,6 +1,6 @@
 :root {
   --text-primary: #252e36;
-  --text-secondary: #6d757d;
+  --text-secondary: #666d75;
 
   --color-blue-50: rgba(239, 246, 255, 1);
   --color-blue-100: rgba(219, 234, 254, 1);
@@ -8,7 +8,7 @@
   --color-blue-300: rgba(147, 197, 253, 1);
   --color-blue-400: rgba(96, 165, 250, 1);
   --color-blue-500: rgba(59, 130, 246, 1);
-  --color-blue-600: rgba(37, 99, 235, 1);
+  --color-blue-600: rgba(37, 98, 233, 1);
   --color-blue-700: rgba(29, 78, 216, 1);
   --color-blue-800: rgba(30, 64, 175, 1);
   --color-blue-900: rgba(30, 58, 138, 1);

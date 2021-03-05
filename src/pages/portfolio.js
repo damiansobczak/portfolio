@@ -1,6 +1,7 @@
 import * as React from "react";
 import "../styles/global.css";
 import { graphql } from "gatsby";
+import { Helmet } from "react-helmet";
 import styled from "styled-components";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
@@ -63,11 +64,11 @@ const Tags = styled.ul`
   justify-content: center;
   list-style: none;
   padding: 16px 0 0;
+  font-family: "Inter";
+  font-weight: 400;
 
   & > * + * {
     margin-left: 16px;
-    font-family: "Inter";
-    font-weight: 400;
   }
 `;
 
@@ -104,6 +105,43 @@ const SocialItem = styled.button`
 const Portfolio = ({ data }) => {
   return (
     <>
+      <Helmet
+        title={data.datoCmsPortfolio.title}
+        meta={[
+          {
+            name: `description`,
+            content: data.datoCmsPortfolio.description,
+          },
+          {
+            property: `og:title`,
+            content: data.datoCmsPortfolio.title,
+          },
+          {
+            property: `og:description`,
+            content: data.datoCmsPortfolio.description,
+          },
+          {
+            property: `og:type`,
+            content: `website`,
+          },
+          {
+            name: `twitter:card`,
+            content: `summary`,
+          },
+          {
+            name: `twitter:creator`,
+            content: "Damian Sobczak",
+          },
+          {
+            name: `twitter:title`,
+            content: data.datoCmsPortfolio.title,
+          },
+          {
+            name: `twitter:description`,
+            content: data.datoCmsPortfolio.description,
+          },
+        ]}
+      />
       <Navbar light={true} />
       <Breadcrumbs item={data.datoCmsPortfolio.title} />
       <Container>

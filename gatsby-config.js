@@ -2,7 +2,10 @@ require("dotenv").config();
 
 module.exports = {
   siteMetadata: {
-    title: "Damian Sobczak Portfolio",
+    title: `Damian Sobczak Portfolio Site`,
+    author: `Damian Sobczak`,
+    keywords: `ui, ux, design, website, programming, web, portfolio`,
+    description: `Personal portfolio website showing my UI/UX, and programming skills.`,
     siteUrl: `https://uicloud-portfolio.netlify.app`,
   },
   plugins: [

@@ -129,16 +129,22 @@ const Menu = (props) => {
       </Close>
       <MenuList>
         <MenuListItem variants={fadeUp}>
-          <MenuListButton>Top</MenuListButton>
+          <MenuListButton aria-label="Navigate to Top">Top</MenuListButton>
         </MenuListItem>
         <MenuListItem variants={fadeUp}>
-          <MenuListButton>UI/UX</MenuListButton>
+          <MenuListButton aria-label="Navigate to UI section">
+            UI/UX
+          </MenuListButton>
         </MenuListItem>
         <MenuListItem variants={fadeUp}>
-          <MenuListButton>Programming</MenuListButton>
+          <MenuListButton aria-label="Navigate to Programming section">
+            Programming
+          </MenuListButton>
         </MenuListItem>
         <MenuListItem variants={fadeUp}>
-          <MenuListButton>Portfolio</MenuListButton>
+          <MenuListButton aria-label="Navigate to Portfolio section">
+            Portfolio
+          </MenuListButton>
         </MenuListItem>
       </MenuList>
     </MenuWrapper>

@@ -41,7 +41,11 @@ const Navbar = ({ light }) => {
       <Container>
         <Navigation>
           <Logo toggle={toggle} />
-          <MobileButton onClick={() => setToggle((toggle) => !toggle)}>
+          <MobileButton
+            onClick={() => setToggle((toggle) => !toggle)}
+            title="Toggle menu"
+            aria-label="Toggle menu"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"

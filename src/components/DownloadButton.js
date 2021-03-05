@@ -17,7 +17,7 @@ const Button = styled.button`
 `;
 
 const DownloadButton = () => {
-  return <Button>CV Document</Button>;
+  return <Button aria-label="Download CV document">CV Document</Button>;
 };
 
 export default DownloadButton;

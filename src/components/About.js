@@ -95,7 +95,7 @@ const Menu = () => {
           <Subtitle>Who am I?</Subtitle>
           <Title>Making UI/UX and Websites with 5 years experience</Title>
           <SocialItems>
-            <SocialItem>
+            <SocialItem aria-label="Link to LinkedIn">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="20"
@@ -110,7 +110,7 @@ const Menu = () => {
                 />
               </svg>
             </SocialItem>
-            <SocialItem>
+            <SocialItem aria-label="Link to Behance">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="25.388"
@@ -123,7 +123,7 @@ const Menu = () => {
                 />
               </svg>
             </SocialItem>
-            <SocialItem>
+            <SocialItem aria-label="Link to Github">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="22.072"
@@ -136,7 +136,7 @@ const Menu = () => {
                 />
               </svg>
             </SocialItem>
-            <SocialItem>
+            <SocialItem aria-label="Link to Dribbble">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="22"

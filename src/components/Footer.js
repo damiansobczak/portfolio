@@ -165,7 +165,7 @@ const Footer = () => {
           </Container>
           <Container>
             <SocialItems>
-              <SocialItem>
+              <SocialItem aria-label="Link to LinkedIn">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"
@@ -180,7 +180,7 @@ const Footer = () => {
                   />
                 </svg>
               </SocialItem>
-              <SocialItem>
+              <SocialItem aria-label="Link to Behance">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="25.388"
@@ -193,7 +193,7 @@ const Footer = () => {
                   />
                 </svg>
               </SocialItem>
-              <SocialItem>
+              <SocialItem aria-label="Link to Github">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="22.072"
@@ -206,7 +206,7 @@ const Footer = () => {
                   />
                 </svg>
               </SocialItem>
-              <SocialItem>
+              <SocialItem aria-label="Link to Dribbble">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="22"

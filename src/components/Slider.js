@@ -229,7 +229,9 @@ const Slider = () => {
                   See what benefits, Designer who can code can bring to your
                   projects
                 </SlideText>
-                <Button variants={fadeUp}>Scroll Down</Button>
+                <Button aria-label="Scroll down" variants={fadeUp}>
+                  Scroll Down
+                </Button>
               </SlideColumn>
               <SlideImage
                 fluid={data.file.childImageSharp.fluid}

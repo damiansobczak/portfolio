@@ -36,7 +36,7 @@ const Content = styled.div`
 `;
 
 const Text = styled.div`
-  color: var(--color-blue-300);
+  color: var(--color-blue-200);
   font-family: "Inter";
   font-weight: 400;
   margin-top: 8px;

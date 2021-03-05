@@ -106,6 +106,9 @@ const Portfolio = ({ data }) => {
   return (
     <>
       <Helmet
+        htmlAttributes={{
+          lang: `en`,
+        }}
         title={data.datoCmsPortfolio.title}
         meta={[
           {

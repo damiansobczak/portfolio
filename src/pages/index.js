@@ -39,6 +39,9 @@ const IndexPage = ({
   return (
     <>
       <Helmet
+        htmlAttributes={{
+          lang: `en`,
+        }}
         title={title}
         meta={[
           {

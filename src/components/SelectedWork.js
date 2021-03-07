@@ -53,6 +53,10 @@ const BlogTitle = styled.h3`
   text-align: center;
   font-size: var(--text-lg);
   margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 `;
 
 const BlogText = styled.p`
@@ -61,6 +65,10 @@ const BlogText = styled.p`
   font-family: "Inter";
   text-align: center;
   line-height: 1.6;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 `;
 
 const Navigate = styled(Link)`
@@ -119,11 +127,8 @@ const SelectedWork = () => {
             {edges.map(({ node: { id, media, title, description, slug } }) => (
               <Article key={id}>
                 <Image fluid={media.fluid} />
-                <BlogTitle>Portfolio Website</BlogTitle>
-                <BlogText>
-                  Suspendisse quis erat purus. Donec sit amet mi id odio rhoncus
-                  volutpat ut ac erat.
-                </BlogText>
+                <BlogTitle>{title}</BlogTitle>
+                <BlogText>{description}</BlogText>
                 <Navigate to={`/portfolio/${slug}`}>
                   See Details
                   <svg

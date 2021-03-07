@@ -2,6 +2,7 @@ import * as React from "react";
 import "../styles/global.css";
 import { graphql } from "gatsby";
 import { Helmet } from "react-helmet";
+import { StructuredText } from "react-datocms";
 import styled from "styled-components";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
@@ -27,6 +28,18 @@ export const query = graphql`
           ...GatsbyDatoCmsFluid
         }
       }
+      additional {
+        fluid(
+          maxWidth: 1000
+          forceBlurhash: true
+          imgixParams: { fm: "webp", auto: "compress" }
+        ) {
+          ...GatsbyDatoCmsFluid
+        }
+      }
+      content {
+        value
+      }
       demo
       behance
       dribbble
@@ -47,7 +60,21 @@ const Title = styled.h1`
 const Content = styled.section`
   text-align: center;
   max-width: var(--w-prose);
-  margin: 0 auto;
+  margin: 0 auto 54px;
+  font-family: "Inter";
+  color: var(--text-primary);
+`;
+
+const Markdown = styled.section`
+  text-align: left;
+  max-width: var(--w-prose);
+  margin: 64px auto;
+  font-family: "Inter";
+  color: var(--text-primary);
+
+  p {
+    line-height: 1.6;
+  }
 `;
 
 const Text = styled.p`
@@ -209,6 +236,16 @@ const Portfolio = ({ data }) => {
           </SocialItems>
         </Content>
         <Image fluid={data.datoCmsPortfolio.media.fluid}></Image>
+        {data.datoCmsPortfolio.content && (
+          <Markdown>
+            <StructuredText
+              data={data.datoCmsPortfolio.content}
+            ></StructuredText>
+          </Markdown>
+        )}
+        {data.datoCmsPortfolio.additional && (
+          <Image fluid={data.datoCmsPortfolio.additional.fluid}></Image>
+        )}
       </Container>
       <Footer />
     </>

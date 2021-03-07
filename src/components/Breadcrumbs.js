@@ -19,7 +19,7 @@ const List = styled.ol`
 `;
 
 const Item = styled.li`
-  color: var(--color-gray-400);
+  color: var(--color-gray-500);
   font-weight: 300;
 `;
 

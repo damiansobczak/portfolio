@@ -74,6 +74,8 @@ const Markdown = styled.section`
 
   p {
     line-height: 1.6;
+    margin: 0;
+    color: var(--text-secondary);
   }
 `;
 
